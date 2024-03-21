@@ -62,7 +62,7 @@ class Flowtitude {
 	public function init_flowtitude() {
 		// Aquí implementas la lógica específica que quieres ejecutar en el editor de Bricks.
 	}
-
+ //comentari
  }
  
  // Instanciar la clase para ejecutar el plugin.
