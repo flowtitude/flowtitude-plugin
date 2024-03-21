@@ -23,5 +23,5 @@ Flowtitude increases your efficiency in building websites with Bricks and Tailwi
 
 == Changelog ==
 
-= 1.0.0 ( Mar 20, 2024 ) =
+= 0.0.1 ( Mar 20, 2024 ) =
 * Initial release*  
