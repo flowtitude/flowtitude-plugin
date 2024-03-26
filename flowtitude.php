@@ -10,8 +10,10 @@
 
 if (!defined('ABSPATH')) {
 	 exit;
- }
- 
+}
+
+define( 'FLOWTITUDE_PLUGIN', plugin_dir_url( __FILE__  ) );
+
 class Flowtitude {
  
 	 public function __construct() {
@@ -61,9 +63,18 @@ class Flowtitude {
 	
 	public function init_flowtitude() {
 		// Aquí implementas la lógica específica que quieres ejecutar en el editor de Bricks.
+		wp_register_script( 'flowtitude-script', FLOWTITUDE_PLUGIN . 'assets/flowtitude-script.js', array('jquery'), '1.0', true );
+		wp_enqueue_script('flowtitude-script');
 	}
- //comentari
+	
+	// add_action( 'wp_enqueue_scripts', array( $this, 'init_flowtitude' ) );
+	
+	//comentari
  }
  
  // Instanciar la clase para ejecutar el plugin.
- new Flowtitude();
+//  new Flowtitude();
+$flowtitude_plugin = new Flowtitude();
+add_action( 'wp_enqueue_scripts', array( $flowtitude_plugin, 'init_flowtitude' ) );
+
+ 
